@@ -69,7 +69,7 @@ NODE_ENV=development
 DB_HOST=localhost
 DB_PORT=5432
 DB_NAME=farm_management
-DB_USER=postgres
+DB_USER=your_postgres_username
 DB_PASSWORD=your_actual_postgres_password_here
 ```
 
