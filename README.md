@@ -13,8 +13,8 @@ Before you start, make sure you have these installed on your computer:
 
 1.   Download/Clone the project   to your computer
 2.   Open the project folder   in VS Code
-3.   Open terminal   in VS Code (`Ctrl + ~` or `View > Terminal`)
-
+3.   Open terminal   in VS Code
+4.   
    Step 2: Install Dependencies
 
 In the terminal, run:
