@@ -701,26 +701,28 @@ app.get('/api/dashboard', authenticateToken, requireDepartmentAccess, async (req
     let taskQuery = 'SELECT COUNT(*) as count FROM tasks WHERE status != $1';
     let assignmentQuery = 'SELECT COUNT(*) as count FROM tool_assignments ta JOIN tools t ON ta.tool_id = t.id WHERE ta.returned_date IS NULL';
     
-    let params = [['completed']];
+    let employeeParams = [];
+    let toolParams = [];
+    let taskParams = ['completed'];
+    let assignmentParams = [];
     
     if (req.departmentFilter.department_id) {
       employeeQuery += ' AND department_id = $1';
       toolQuery += ' WHERE department_id = $1';
       taskQuery += ' AND department_id = $2';
       assignmentQuery += ' AND t.department_id = $1';
-      params = [
-        [req.departmentFilter.department_id],
-        [req.departmentFilter.department_id], 
-        ['completed', req.departmentFilter.department_id],
-        [req.departmentFilter.department_id]
-      ];
+      
+      employeeParams = [req.departmentFilter.department_id];
+      toolParams = [req.departmentFilter.department_id];
+      taskParams = ['completed', req.departmentFilter.department_id];
+      assignmentParams = [req.departmentFilter.department_id];
     }
     
     const [employees, tools, tasks, assignments] = await Promise.all([
-      pool.query(employeeQuery, params[0]),
-      pool.query(toolQuery, params[1]),
-      pool.query(taskQuery, params[2] || ['completed']),
-      pool.query(assignmentQuery, params[3] || [])
+      pool.query(employeeQuery, employeeParams),
+      pool.query(toolQuery, toolParams),
+      pool.query(taskQuery, taskParams),
+      pool.query(assignmentQuery, assignmentParams)
     ]);
     
     let dashboardData = {
