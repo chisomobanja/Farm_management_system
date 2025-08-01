@@ -1,0 +1,99 @@
+/* Layout container */
+.layout {
+  display: flex;
+}
+
+/* ===== TOP HEADER BAR ===== */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background-color: rgb(3, 3, 109);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1001;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  color: white;
+  margin-left: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* ===== HAMBURGER BUTTON ===== */
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 220px;
+  height: calc(100% - 60px);
+  background-color: rgb(3, 3, 109);
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 15px 20px;
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sidebar nav a:hover {
+  background-color: #34495e;
+}
+
+/* Collapse sidebar */
+.sidebar.collapsed {
+  transform: translateX(-100%);
+}
+
+/* ===== MAIN CONTENT AREA ===== */
+.main-content {
+  margin-top: 60px;
+  margin-left: 220px;
+  padding: 20px;
+  width: 100%;
+  transition: margin-left 0.3s ease;
+}
+
+/* Full width when sidebar is collapsed */
+.sidebar.collapsed ~ .main-content {
+  margin-left: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    position: fixed;
+    z-index: 100;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}
+

@@ -1,0 +1,558 @@
+/* /landingpage.css/ */
+.landing-container {
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1587306291053-eb724a9f55cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 60px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.login-button {
+  padding: 12px 30px;
+  background-color: #00b894;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #019875;
+}
+
+/* for login page */
+/* Full screen background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url('/public/Farm-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+/* Container centering */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Translucent box */
+.login-container form {
+  background: rgba(255, 255, 255, 0.15); 
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Headline */
+.login-container h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+}
+
+/* Button */
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #256d46;
+}
+
+
+/* for dashboar */
+.dashboard-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.dashboard-container h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.dashboard-card {
+  background-color: #fff;
+  border-left: 6px solid #17a2b8;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+.dashboard-card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Optional: unique colors */
+.employees { border-color: #007bff; }
+.tools { border-color: #28a745; }
+.tasks { border-color: #ffc107; }
+.assignments { border-color: #dc3545; }
+
+
+/* src/pages/Styles.css */
+.dashboard-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.dashboard-card {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 30px;
+}
+ /* for employee page  */
+.employee-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.employee-form, .search-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.employee-form input, .search-section input {
+  padding: 8px;
+  flex: 1 1 200px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.add-btn {
+  background-color: #2c7a7b;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #225e61;
+}
+
+.add-btn:active {
+  background-color: #19494b;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  /* text: white; */
+}
+
+.employee-table th, .employee-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.6); /* light translucent white */
+  backdrop-filter: blur(3px); /* optional: subtle blur for glass effect */
+}
+
+
+.employee-table th {
+  background-color: #f4f4f4;
+}
+
+.search-section {
+  margin: 20px 0;
+}
+
+.search-section input,
+.add-employee-form input {
+  padding: 8px;
+  margin: 5px;
+}
+
+.add-employee-form form {
+  margin-top: 20px;
+}
+
+.add-employee-form button,
+.search-section button {
+  padding: 8px 12px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+
+
+
+/* for tools  */
+   .assign-tool-container {
+          padding: 2rem;
+          max-width: 1100px;
+          margin: auto;
+        }
+        .assign-tool-form,
+        .add-tool-form {
+          display: flex;
+          gap: 10px;
+          margin-bottom: 1.5rem;
+          flex-wrap: wrap;
+        }
+        .assign-tool-form select,
+        .assign-tool-form input,
+        .add-tool-form input {
+          padding: 8px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+        .assign-tool-form button,
+        .add-tool-form button {
+          background-color: #2f855a;
+          color: white;
+          border: none;
+          padding: 8px 14px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        .assign-tool-form button:hover,
+        .add-tool-form button:hover {
+          background-color: #276749;
+        }
+        .tool-assignment-table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+        .tool-assignment-table th,
+        .tool-assignment-table td {
+          border: 1px solid #ccc;
+          padding: 10px;
+          text-align: left;
+        }
+
+.tools-container {
+  padding: 20px;
+}
+
+.tools-container h2 {
+  margin-bottom: 15px;
+}
+
+.tool-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tool-form input {
+  flex: 1 1 200px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.tool-form button {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tool-form button:hover {
+  background-color: #45a049;
+}
+
+.tools-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tools-table th,
+.tools-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.6); /* light translucent white */
+  backdrop-filter: blur(3px); /* optional: subtle blur for glass effect */
+}
+
+.tools-table th {
+  background-color: #f7f7f7;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.assign-tools-container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.assign-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.assign-form select,
+.assign-form input {
+  padding: 8px;
+  font-size: 1rem;
+  flex: 1 1 200px;
+}
+
+.assign-btn {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.assign-btn:hover {
+  background-color: #0056b3;
+}
+
+.assignments-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.assignments-table th,
+.assignments-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.6); /* light translucent white */
+  backdrop-filter: blur(3px); /* optional: subtle blur for glass effect */
+}
+
+.return-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.return-btn:hover {
+  background-color: #b02a37;
+} 
+
+
+/* for tasks page */
+
+.tasks-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form input,
+.form textarea,
+.form select {
+  padding: 8px;
+  width: 200px;
+}
+
+.form button {
+  padding: 8px 16px;
+  background-color: #3b7ddd;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #265bb5;
+}
+
+.tasks-table {
+ padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.6); /* light translucent white */
+  backdrop-filter: blur(3px); /* optional: subtle blur for glass effect */
+}
+
+.tasks-table th,
+.tasks-table td {
+ padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.6); /* light translucent white */
+  backdrop-filter: blur(3px); /* optional: subtle blur for glass effect */
+};
+
+.tasks-table th {
+  background-color: #f2f2f2;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.success {
+  color: green;
+  margin-top: 10px;
+}
+
+.search-container {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.search-container input {
+  padding: 8px;
+  width: 300px;
+}
+
+.search-container button {
+  padding: 8px 16px;
+  background-color: #999;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #666;
+}
+
+/* for assigntools page  */
+        .assign-tool-container {
+          padding: 2rem;
+          max-width: 1100px;
+          margin: auto;
+        }
+        .assign-tool-form,
+        .add-tool-form {
+          display: flex;
+          gap: 10px;
+          margin-bottom: 1.5rem;
+          flex-wrap: wrap;
+        }
+        .assign-tool-form select,
+        .assign-tool-form input,
+        .add-tool-form input {
+          padding: 8px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+        .assign-tool-form button,
+        .add-tool-form button {
+          background-color: #2f855a;
+          color: white;
+          border: none;
+          padding: 8px 14px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        .assign-tool-form button:hover,
+        .add-tool-form button:hover {
+          background-color: #276749;
+        }
+        .tool-assignment-table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+        .tool-assignment-table th,
+        .tool-assignment-table td {
+          padding: 10px;
+          border: 1px solid #ddd;
+          text-align: left;
+          background-color: rgba(255, 255, 255, 0.6); /* light translucent white */
+          backdrop-filter: blur(3px); /* optional: subtle blur for glass effect */
+        }
